@@ -1,1 +1,344 @@
-hello
+Flask Hiring TestWhy this test?We build applications for the web, so understanding how web applications work, is apre-requisite for any new engineer. Flask is one of the simplest and well written Pythonbased web application frameworks and can easily be learned in a few hours.If you have never worked on web applications before, this test will also help youevaluate whether this is something you are skilled at or can easily learn doing.Inventory Management Web ApplicationThe goal is to create a web application using Flask framework to manage inventory of alist of products in respective warehouses. Imaging this application will be used in ashop or a warehouse that needs to keep track of various products and various locationsThe application should cover the following functionalities:Database Tables:● Product (product_id)● Location (location_id)● ProductMovement (movement_id, timestamp, from_location, to_location,product_id, qty)Note:1. Primary keys can be text / varchar2. Any one, or both of from_location  and to_location  can be filled. If you want tomove things into  a location, from_location  will be blank, if you want to movethings out, then to_location  will be blank.Views:● Add/Edit/View Product● Add/Edit/View Location● Add/Edit/View ProductMovementReport:● Balance quantity in each locationUse Cases:● Create 3/4 Products● Create 3/4 Locations● Make ProductMovements● Move Product A to Location X● Move Product B to Location X● Move Product A from Location X to Location Y● (make 20 such movements)● Get product balance in each Location in a grid view, with 3 columns: Product,Warehouse, Qty
+
+I'll create a comprehensive Flask inventory management application for you. This will include all the required functionality with a clean, user-friendly interface.
+
+Flask Inventory Management Application
+Code 
+Now let me create the HTML templates. I'll create a complete set of templates for the application:
+
+HTML Templates (templates folder)
+Code 
+Perfect! Now let me create a requirements file and setup instructions:
+
+Setup Instructions & Requirements
+Document 
+Continue
+
+Setup Instructions & Requirements
+Document ∙ Version 2 
+Perfect! I've created a complete Flask Inventory Management Application for you. Here's what you get:
+
+📦 What's Included
+1. Complete Flask Application (app.py)
+
+Full database models for Product, Location, and ProductMovement
+All CRUD operations (Create, Read, Update)
+Inventory balance calculation logic
+Clean routing structure
+2. Professional HTML Templates
+
+Base template with navigation and consistent styling
+Forms for adding/editing products, locations, and movements
+List views with tables for all entities
+Inventory balance report with 3-column grid (Product, Warehouse, Qty)
+Modern, responsive CSS design
+3. Setup Guide
+
+Step-by-step installation instructions
+20 sample movements to test the system
+Troubleshooting tips
+🎯 Key Features
+✅ Add/Edit/View for Products, Locations, and Movements ✅ Smart movement tracking - supports IN, OUT, and TRANSFER operations ✅ Automatic inventory calculation - real-time balance across all locations ✅ Professional UI - clean, modern interface with flash messages ✅ Validation - ensures data integrity (e.g., at least one location required) ✅ Timestamps - automatic tracking of when movements occur
+
+🚀 Quick Start
+Create the folder structure and copy the code files
+Install dependencies: pip install Flask Flask-SQLAlchemy
+Run: python app.py
+Visit: http://127.0.0.1:5000
+Start adding products, locations, and movements!
+The application is production-ready and follows Flask best practices. It uses SQLite for easy setup (no separate database server needed) and includes all the functionality specified in your hiring test requirements.
+
+Folder structure for this
+
+Complete Folder Structure Guide
+Document 
+Perfect! I've created a comprehensive folder structure guide for you. Here's a quick visual summary:
+
+📁 Simple Overview
+inventory_app/
+├── app.py                    ← Main Flask app
+├── requirements.txt          ← Dependencies
+└── templates/                ← All HTML files (9 files)
+    ├── base.html
+    ├── index.html
+    ├── products.html
+    ├── product_form.html
+    ├── locations.html
+    ├── location_form.html
+    ├── movements.html
+    ├── movement_form.html
+    └── report.html
+🎯 You Need to Create:
+2 files in the root folder
+9 HTML files in the templates folder
+Total: 11 files
+The guide includes:
+✅ Complete directory tree visualization
+✅ Purpose of each file
+✅ Copy-paste commands for Windows/Mac/Linux
+✅ Verification checklist
+✅ Step-by-step setup instructions
+
+Just follow the commands for your operating system, copy the code into the respective files, and you're ready to go!
+
+
+
+
+
+
+Flask Inventory Management Application
+Setup Instructions
+1. Install Dependencies
+Create a requirements.txt file with:
+
+Flask==3.0.0
+Flask-SQLAlchemy==3.1.1
+Install dependencies:
+
+bash
+pip install -r requirements.txt
+2. Project Structure
+Create the following structure:
+
+inventory_app/
+├── app.py
+├── requirements.txt
+└── templates/
+    ├── base.html
+    ├── index.html
+    ├── products.html
+    ├── product_form.html
+    ├── locations.html
+    ├── location_form.html
+    ├── movements.html
+    ├── movement_form.html
+    └── report.html
+3. Run the Application
+bash
+python app.py
+The application will be available at http://127.0.0.1:5000/
+
+4. Sample Data Setup
+Once the application is running, follow these steps to create sample data:
+
+Create Products:
+Go to Products → Add New Product
+Create the following:
+Product A (ID: PROD_A, Name: "Laptop")
+Product B (ID: PROD_B, Name: "Monitor")
+Product C (ID: PROD_C, Name: "Keyboard")
+Product D (ID: PROD_D, Name: "Mouse")
+Create Locations:
+Go to Locations → Add New Location
+Create the following:
+Location X (ID: LOC_X, Name: "Main Warehouse")
+Location Y (ID: LOC_Y, Name: "Store Front")
+Location Z (ID: LOC_Z, Name: "Storage Room")
+Location W (ID: LOC_W, Name: "Repair Center")
+Create Sample Movements:
+Initial Stock (Moving INTO locations):
+
+MVT_001: Product A → Location X, Qty: 50
+MVT_002: Product B → Location X, Qty: 30
+MVT_003: Product C → Location X, Qty: 100
+MVT_004: Product D → Location X, Qty: 150
+Transfers Between Locations: 5. MVT_005: Product A, Location X → Location Y, Qty: 10 6. MVT_006: Product B, Location X → Location Y, Qty: 8 7. MVT_007: Product A, Location Y → Location Z, Qty: 5 8. MVT_008: Product C, Location X → Location Y, Qty: 20 9. MVT_009: Product D, Location X → Location W, Qty: 15 10. MVT_010: Product A, Location X → Location W, Qty: 3 11. MVT_011: Product B, Location Y → Location Z, Qty: 2 12. MVT_012: Product C, Location Y → Location Z, Qty: 10 13. MVT_013: Product D, Location W → Location Y, Qty: 5 14. MVT_014: Product A, Location Z → Location Y, Qty: 2
+
+Additional Stock IN: 15. MVT_015: Product A → Location X, Qty: 25 16. MVT_016: Product B → Location X, Qty: 15
+
+Stock OUT (from locations): 17. MVT_017: Product C, Location Z
+Flask Hiring TestWhy this test?We build applications for the web, so understanding how web applications work, is apre-requisite for any new engineer. Flask is one of the simplest and well written Pythonbased web application frameworks and can easily be learned in a few hours.If you have never worked on web applications before, this test will also help youevaluate whether this is something you are skilled at or can easily learn doing.Inventory Management Web ApplicationThe goal is to create a web application using Flask framework to manage inventory of alist of products in respective warehouses. Imaging this application will be used in ashop or a warehouse that needs to keep track of various products and various locationsThe application should cover the following functionalities:Database Tables:● Product (product_id)● Location (location_id)● ProductMovement (movement_id, timestamp, from_location, to_location,product_id, qty)Note:1. Primary keys can be text / varchar2. Any one, or both of from_location  and to_location  can be filled. If you want tomove things into  a location, from_location  will be blank, if you want to movethings out, then to_location  will be blank.Views:● Add/Edit/View Product● Add/Edit/View Location● Add/Edit/View ProductMovementReport:● Balance quantity in each locationUse Cases:● Create 3/4 Products● Create 3/4 Locations● Make ProductMovements● Move Product A to Location X● Move Product B to Location X● Move Product A from Location X to Location Y● (make 20 such movements)● Get product balance in each Location in a grid view, with 3 columns: Product,Warehouse, Qty
+
+I'll create a comprehensive Flask inventory management application for you. This will include all the required functionality with a clean, user-friendly interface.
+
+Flask Inventory Management Application
+Code 
+Now let me create the HTML templates. I'll create a complete set of templates for the application:
+
+HTML Templates (templates folder)
+Code 
+Perfect! Now let me create a requirements file and setup instructions:
+
+Setup Instructions & Requirements
+Document 
+Continue
+
+Setup Instructions & Requirements
+Document ∙ Version 2 
+Perfect! I've created a complete Flask Inventory Management Application for you. Here's what you get:
+
+📦 What's Included
+1. Complete Flask Application (app.py)
+
+Full database models for Product, Location, and ProductMovement
+All CRUD operations (Create, Read, Update)
+Inventory balance calculation logic
+Clean routing structure
+2. Professional HTML Templates
+
+Base template with navigation and consistent styling
+Forms for adding/editing products, locations, and movements
+List views with tables for all entities
+Inventory balance report with 3-column grid (Product, Warehouse, Qty)
+Modern, responsive CSS design
+3. Setup Guide
+
+Step-by-step installation instructions
+20 sample movements to test the system
+Troubleshooting tips
+🎯 Key Features
+✅ Add/Edit/View for Products, Locations, and Movements ✅ Smart movement tracking - supports IN, OUT, and TRANSFER operations ✅ Automatic inventory calculation - real-time balance across all locations ✅ Professional UI - clean, modern interface with flash messages ✅ Validation - ensures data integrity (e.g., at least one location required) ✅ Timestamps - automatic tracking of when movements occur
+
+🚀 Quick Start
+Create the folder structure and copy the code files
+Install dependencies: pip install Flask Flask-SQLAlchemy
+Run: python app.py
+Visit: http://127.0.0.1:5000
+Start adding products, locations, and movements!
+The application is production-ready and follows Flask best practices. It uses SQLite for easy setup (no separate database server needed) and includes all the functionality specified in your hiring test requirements.
+
+Folder structure for this
+
+Complete Folder Structure Guide
+Document 
+Perfect! I've created a comprehensive folder structure guide for you. Here's a quick visual summary:
+
+📁 Simple Overview
+inventory_app/
+├── app.py                    ← Main Flask app
+├── requirements.txt          ← Dependencies
+└── templates/                ← All HTML files (9 files)
+    ├── base.html
+    ├── index.html
+    ├── products.html
+    ├── product_form.html
+    ├── locations.html
+    ├── location_form.html
+    ├── movements.html
+    ├── movement_form.html
+    └── report.html
+🎯 You Need to Create:
+2 files in the root folder
+9 HTML files in the templates folder
+Total: 11 files
+The guide includes:
+✅ Complete directory tree visualization
+✅ Purpose of each file
+✅ Copy-paste commands for Windows/Mac/Linux
+✅ Verification checklist
+✅ Step-by-step setup instructions
+
+Just follow the commands for your operating system, copy the code into the respective files, and you're ready to go!
+
+
+
+
+
+
+Flask Inventory Management Application
+Setup Instructions
+1. Install Dependencies
+Create a requirements.txt file with:
+
+Flask==3.0.0
+Flask-SQLAlchemy==3.1.1
+Install dependencies:
+
+bash
+pip install -r requirements.txt
+2. Project Structure
+Create the following structure:
+
+inventory_app/
+├── app.py
+├── requirements.txt
+└── templates/
+    ├── base.html
+    ├── index.html
+    ├── products.html
+    ├── product_form.html
+    ├── locations.html
+    ├── location_form.html
+    ├── movements.html
+    ├── movement_form.html
+    └── report.html
+3. Run the Application
+bash
+python app.py
+The application will be available at http://127.0.0.1:5000/
+
+4. Sample Data Setup
+Once the application is running, follow these steps to create sample data:
+
+Create Products:
+Go to Products → Add New Product
+Create the following:
+Product A (ID: PROD_A, Name: "Laptop")
+Product B (ID: PROD_B, Name: "Monitor")
+Product C (ID: PROD_C, Name: "Keyboard")
+Product D (ID: PROD_D, Name: "Mouse")
+Create Locations:
+Go to Locations → Add New Location
+Create the following:
+Location X (ID: LOC_X, Name: "Main Warehouse")
+Location Y (ID: LOC_Y, Name: "Store Front")
+Location Z (ID: LOC_Z, Name: "Storage Room")
+Location W (ID: LOC_W, Name: "Repair Center")
+Create Sample Movements:
+Initial Stock (Moving INTO locations):
+
+MVT_001: Product A → Location X, Qty: 50
+MVT_002: Product B → Location X, Qty: 30
+MVT_003: Product C → Location X, Qty: 100
+MVT_004: Product D → Location X, Qty: 150
+Transfers Between Locations: 5. MVT_005: Product A, Location X → Location Y, Qty: 10 6. MVT_006: Product B, Location X → Location Y, Qty: 8 7. MVT_007: Product A, Location Y → Location Z, Qty: 5 8. MVT_008: Product C, Location X → Location Y, Qty: 20 9. MVT_009: Product D, Location X → Location W, Qty: 15 10. MVT_010: Product A, Location X → Location W, Qty: 3 11. MVT_011: Product B, Location Y → Location Z, Qty: 2 12. MVT_012: Product C, Location Y → Location Z, Qty: 10 13. MVT_013: Product D, Location W → Location Y, Qty: 5 14. MVT_014: Product A, Location Z → Location Y, Qty: 2
+
+Additional Stock IN: 15. MVT_015: Product A → Location X, Qty: 25 16. MVT_016: Product B → Location X, Qty: 15
+
+Stock OUT (from locations): 17. MVT_017: Product C, From Location Z, Qty: 5 18. MVT_018: Product D, From Location Y, Qty: 10 19. MVT_019: Product A, From Location Y, Qty: 3 20. MVT_020: Product B, From Location X, Qty: 7
+
+5. View the Report
+After creating all movements, go to the Report page to see the inventory balance across all locations.
+
+Features Implemented
+✅ Database Tables
+Product: Stores product information with product_id as primary key
+Location: Stores warehouse/location information with location_id as primary key
+ProductMovement: Tracks all inventory movements with support for:
+Moving items INTO a location (from_location is NULL)
+Moving items OUT of a location (to_location is NULL)
+Transferring between locations (both fields populated)
+✅ CRUD Operations
+Products: Add, Edit, View all products
+Locations: Add, Edit, View all locations
+Movements: Add, Edit, View all movements with timestamp tracking
+✅ Inventory Report
+Grid view showing Product, Warehouse, and Quantity
+Automatically calculates balance by:
+Adding quantities for movements TO a location
+Subtracting quantities for movements FROM a location
+Only displays locations with non-zero inventory
+Sorted alphabetically by product and location
+✅ User Interface
+Clean, modern, responsive design
+Navigation menu for easy access to all sections
+Flash messages for user feedback
+Form validation
+Mobile-friendly layout
+Key Technical Details
+Movement Logic
+from_location = NULL, to_location = SET: Stock coming IN
+from_location = SET, to_location = NULL: Stock going OUT
+from_location = SET, to_location = SET: Transfer between locations
+At least one location must be specified
+Report Calculation
+The report calculates inventory by processing all movements:
+
+Initialize all product-location combinations to 0
+For each movement TO a location: add quantity
+For each movement FROM a location: subtract quantity
+Display only non-zero balances
+Database
+Uses SQLite (inventory.db) for simplicity
+Database is automatically created on first run
+All tables use VARCHAR/TEXT for primary keys as specified
